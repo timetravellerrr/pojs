@@ -75,6 +75,10 @@
           {
             "Name": "React",
             "Hot": true
+          },
+          {
+            "Name": "Node JS",
+            "Hot": true
           }
         ]
       }      

@@ -6,6 +6,11 @@ import React, { Component } from 'react';
 
 class PA extends Component {
 
+  state = {
+    obj_arr: [],
+    typed: ''
+  }
+
   render() {
     const {obj_arr} = this.state;
     return (
@@ -68,10 +73,10 @@ class PA extends Component {
         return(
           <div className="card" key={id} style={{width: 10   + 'rem', margin: '5px' }}>
               <div className="text-center">
-                <a href={`/p/${id}`}><img src="https://via.placeholder.com/150" className="card-img-top" alt="..." style={{width: 5   + 'rem', margin: '5px' }}/></a>
+                <a href={`/p/${id}`}><img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`} className="card-img-top" alt="..." style={{width: 5   + 'rem', margin: '5px' }}/></a>
               </div>
-              <div className="card-body text-center">
-                <h6 className="card-text text-secondary font-weight-light font-italic">#{id}</h6>
+              <div className="card-body text-center" style={{paddingTop :'0px'}}>
+                <p className="card-text text-secondary font-weight-light font-italic">#{id}</p>
                 <a className="" href={`/p/${id}`}>{this.capitalize(t.name)}</a>
                 {/* <a className="btn btn-primary btn-block" href={`/p/${id}`}><FontAwesomeIcon icon={faEye} /></a>               */}
               </div>
@@ -91,11 +96,6 @@ class PA extends Component {
 
   render_loading() {
     return (<div className = "row justify-content-md-center">Loading...</div>);
-  }
-
-  state = {
-    obj_arr: [],
-    typed: ''
   }
 
   componentDidMount() {
