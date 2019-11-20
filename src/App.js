@@ -13,17 +13,17 @@ class App extends Component {
     render() {
         return (
             <div className="App" id="root">
-				<Router>                    
+                <Router>
                     <Route
-                        path="/" exact render={()=> {
+                        path="/" exact render={() => {
                             return (<PA></PA>)
                         }}
-                    />                    
+                    />
                     <Route
-                        path={`/p/`} render={()=> {
+                        path={`/p/`} render={() => {
                             return (<PB></PB>)
                         }}
-                    />     
+                    />
                     {/* <Route path="*" exact component={PNF} /> */}
                 </Router>
             </div>
